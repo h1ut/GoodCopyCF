@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "GoodCopyCF",
+  "version": "1.0.0",
+  "description": "Копирует условия задач Codeforces без потери формул: LaTeX попадает в буфер как $...$.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://codeforces.com/*", "https://*.codeforces.com/*"],
+      "js": ["src/serialize.js", "src/selection.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "goodcopycf@goodcopycf.addon",
+      "strict_min_version": "127.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

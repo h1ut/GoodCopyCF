@@ -1,0 +1,16 @@
+{
+  "name": "goodcopycf",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Копирование условий Codeforces без потери формул",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "icons": "node scripts/make-icons.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.6.1",
+    "jsdom": "^29.1.1"
+  }
+}
